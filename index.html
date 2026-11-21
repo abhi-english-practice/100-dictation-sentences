@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080609">
+  <meta name="description" content="Abhi-Uyen listening dictation practice: 100 collocation fill-in-the-blank audio cards. Listen, pause, replay, repeat and check your answers at your own pace.">
+  <title>Abhi-Uyen | Listening Collocations · 100 Sentences</title>
+  <style>
+  :root { --neon:#dcff36; --neon2:#c3f02e; --paper:#fbf7ed; --ink:#151910; --dark:#070a06; --sub:#756e5c; --red:#df302b; --cream:#eae5d7; --line:#dcd4c0; --soft:#f2ecde; }
+  * {box-sizing:border-box}
+  html {scroll-behavior:smooth}
+  body {margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 46%,#17200c 0%,#090d07 44%,#020302 100%);color:#f3f5e9;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;}
+  button, input, select {font:inherit}
+  button {cursor:pointer}
+  button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,audio:focus-visible {outline:3px solid #82b900;outline-offset:3px}
+  .wrap {max-width:1400px;margin:auto;padding:52px 34px 44px}
+  .topbar {display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:27px}
+  .brand {display:flex;align-items:center;gap:13px;font-size:12px;letter-spacing:2.35px;font-weight:950}
+  .logo {display:grid;place-items:center;background:var(--neon);color:#172007;border-radius:10px;width:43px;height:43px;letter-spacing:-1px;font-size:20px;font-weight:950}
+  .slash {color:var(--neon)}
+  .topline,.count {color:#d6ddc5;font-size:11px;font-weight:850;letter-spacing:2.5px;white-space:nowrap}
+  .count {font-size:13px;letter-spacing:1.8px}
+  .count strong {color:var(--neon);font-variant-numeric:tabular-nums}
+  .panel {border:5px solid var(--neon);border-radius:26px;background:var(--paper);color:var(--ink);box-shadow:0 0 0 2px #657b0c,0 12px 0 #2f361e,0 10px 46px #d4ff3652;overflow:hidden}
+  .panel-main {padding:30px 42px 36px;min-height:590px;display:flex;flex-direction:column}
+  .panel-head {display:flex;align-items:flex-start;justify-content:space-between;gap:20px}
+  .heading {display:flex;align-items:center;gap:14px}
+  .number {min-width:62px;height:44px;border-radius:10px;background:#151912;color:var(--neon);font-size:23px;font-weight:1000;display:grid;place-items:center;font-variant-numeric:tabular-nums}
+  .kicker {letter-spacing:2px;font-size:13px;font-weight:950;color:#575747}
+  .small-desc {margin:14px 0 0;color:var(--sub);font-size:15px;font-weight:650;line-height:1.45}
+  .head-aside {border:1px solid #d7d0bd;background:#fffaf0;padding:12px 18px;border-radius:14px;text-align:right;flex-shrink:0}
+  .head-aside strong {display:block;font-size:12px;letter-spacing:1.8px;color:#1f2715}
+  .head-aside span {display:block;font-size:12px;color:#766b50;margin-top:3px}
+  .center {flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;padding:38px 10px 14px}
+  .eyebrow {font-size:12px;letter-spacing:3px;color:#827459;font-weight:950;text-align:center}
+  .audio-block {margin:23px auto 26px;width:100%;max-width:735px;border:1px solid #e2d8bd;background:#fffdf7;border-radius:19px;padding:15px 18px;box-shadow:0 3px 14px #2117090b}
+  .audio-title {display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:10px;font-size:12px;color:#534c3f;font-weight:850;letter-spacing:.35px}
+  .audio-title .label-audio {display:flex;align-items:center;gap:9px}
+  .sound-icon {font-size:20px}
+  audio {width:100%;height:52px;display:block;accent-color:#9dca00}
+  .audio-actions {display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin-top:13px}
+  .audio-actions .group {display:flex;flex-wrap:wrap;gap:9px;align-items:center}
+  .small-btn {background:#fffdf6;border:1px solid #aea184;padding:9px 13px;border-radius:10px;color:#3a3529;font-size:13px;font-weight:800;min-height:37px}
+  .small-btn:hover {background:#f3edda}
+  .small-btn.is-on {background:#e2ff83;border-color:#8bb400;color:#1e290d}
+  .speed {display:flex;align-items:center;gap:9px;color:#5f5541;font-size:12px;font-weight:750}
+  .speed select {border:1px solid #a89c7d;border-radius:8px;background:white;padding:7px 8px;color:#272516}
+  .sentence {margin:3px 0 0;text-align:center;font-size:clamp(26px,3.3vw,42px);line-height:1.55;letter-spacing:-1.15px;font-weight:950;max-width:1040px;overflow-wrap:break-word}
+  .blank {display:inline-block;border-bottom:5px solid #9b8f68;min-width:100px;min-height:1.15em;vertical-align:-.11em;white-space:nowrap;color:transparent;letter-spacing:3px;max-width:95%}
+  .answer-red {color:var(--red);text-decoration:underline;text-decoration-color:#da3026;text-decoration-thickness:3px;text-underline-offset:7px}
+  .hint-btn {margin-top:24px;border:1px solid #bbaa82;background:#fff9ed;border-radius:40px;color:#72532d;font-size:12px;font-weight:850;padding:9px 19px}
+  .hint-btn:hover {background:#f5e9d0}
+  .hint {min-height:22px;margin:11px 0 0;text-align:center;color:#6f5532;font-size:14px;font-weight:650}
+  .entry {width:100%;max-width:670px;margin:25px auto 0}
+  .entry label {display:block;margin-bottom:9px;color:#5b5546;font-size:12px;font-weight:900;letter-spacing:1.35px;text-align:left}
+  .entry input {display:block;width:100%;min-height:51px;background:white;border:2px solid #c7bc9d;border-radius:12px;padding:10px 16px;text-align:center;color:#1b2111;font-size:18px;font-weight:700}
+  .entry input::placeholder {color:#9c9b91;font-weight:500;font-size:15px}
+  .entry input:focus {border-color:#9ac300;outline:none;box-shadow:0 0 0 3px #d2fc7d77}
+  .check-row {display:flex;justify-content:center;flex-wrap:wrap;gap:11px;margin-top:14px}
+  .action {border:2px solid #171b12;background:#171b12;color:#f7ffe2;padding:12px 20px;min-height:47px;border-radius:11px;font-size:13px;font-weight:900;white-space:nowrap}
+  .action:hover {filter:brightness(1.14)}
+  .action.alt {background:#fffdf7;color:#222516}
+  .action.check {background:var(--neon);color:#151b09;border-color:#90ad18}
+  .feedback {min-height:25px;margin-top:13px;font-size:14px;font-weight:800;text-align:center;line-height:1.5}
+  .feedback.good {color:#46740a}
+  .feedback.bad {color:#a54923}
+  .feedback.revealed {color:#a52c22}
+  .panel-foot {display:flex;gap:15px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--cream);border-top:1px solid #dbd2bf;padding:17px 35px}
+  .status {display:flex;align-items:center;gap:9px;color:#5f6a3f;font-weight:900;letter-spacing:1px;font-size:12px}
+  .dot {background:#8ba936;width:11px;height:11px;border-radius:50%;box-shadow:0 0 0 4px #b8d67d66}
+  .foot-buttons {display:flex;flex-wrap:wrap;gap:10px}
+  .foot-btn {min-height:49px;padding:0 20px;border-radius:12px;background:#f5f0e2;border:2px solid #22261b;font-size:13px;font-weight:900;color:#161b13}
+  .foot-btn:hover {background:#fff}
+  .foot-btn.primary {background:var(--neon)}
+  .foot-btn:disabled {opacity:.38;cursor:default}
+  .under {margin-top:39px}
+  .under-head {display:flex;gap:18px;align-items:center;justify-content:space-between;color:#d8e8b0;font-size:12px;font-weight:900;letter-spacing:1.65px}
+  .set-picker {display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.2px;color:#b9c6a2}
+  .set-picker select {background:#151d11;border:1px solid #6c8331;border-radius:9px;color:#ebf4d8;padding:9px 10px;min-width:190px}
+  .round-grid {display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:9px;margin:15px 0 21px}
+  .round {border:1px solid #4f5c36;border-radius:11px;background:#192017;color:#d0e6a4;padding:12px 3px;font-size:13px;font-weight:950;min-height:46px}
+  .round:hover {border-color:var(--neon)}
+  .round.active {background:var(--neon);border-color:var(--neon);color:#171b0d;box-shadow:0 0 17px #dfff3647}
+  .round.done:not(.active) {background:#374d1a;border-color:#8dbb36;color:#f2ffd3}
+  .progress-row {display:flex;align-items:center;gap:17px;color:#b8cba3;font-size:12px;font-weight:800;margin-bottom:14px}
+  .progress-row .bar {height:9px;flex:1;border-radius:30px;background:#293425;overflow:hidden}
+  .progress-row .bar span {display:block;height:100%;width:0;background:var(--neon);transition:width .2s}
+  details.browser {border-top:1px solid #354226;padding-top:19px;margin-top:21px}
+  details.browser summary {font-size:12px;color:#dbe9c0;font-weight:850;cursor:pointer;width:max-content}
+  .all-grid {display:grid;grid-template-columns:repeat(20,minmax(0,1fr));gap:6px;margin-top:16px}
+  .all-grid .round {border-radius:8px;min-height:37px;padding:7px 2px;font-size:11px}
+  .credits {color:#697b5a;font-size:11px;text-align:right;margin-top:19px}
+  .toast {position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#1e3011;color:#e3ff9b;border:1px solid #799c2d;border-radius:12px;padding:12px 16px;box-shadow:0 7px 20px #0007;font-weight:850;font-size:13px;z-index:50;display:none;max-width:90%;text-align:center}
+  .toast.show {display:block}
+  @media (max-width:960px){.wrap{padding:26px 23px 32px}.topline{display:none}.panel-main{padding:24px 24px 26px;min-height:560px}.center{padding:25px 0 12px}.sentence{font-size:clamp(25px,4.2vw,37px)}.all-grid{grid-template-columns:repeat(10,minmax(0,1fr))}}
+  @media (max-width:640px){.wrap{padding:19px 11px 26px}.brand{font-size:10px;letter-spacing:1.2px;gap:9px}.logo{width:36px;height:36px;font-size:17px}.count{font-size:11px;letter-spacing:.3px}.topbar{margin-bottom:18px}.panel{border-width:3px;border-radius:19px}.panel-main{min-height:650px;padding:18px 15px 24px}.panel-head{gap:8px}.heading{gap:8px}.number{min-width:45px;height:37px;font-size:18px}.kicker{font-size:10px;letter-spacing:1px}.small-desc{font-size:12px;margin-top:11px}.head-aside{display:none}.center{padding:25px 0 4px}.eyebrow{font-size:10px;letter-spacing:1.6px}.audio-block{padding:13px 11px;margin:21px auto 26px;border-radius:13px}.audio-title{font-size:11px}.audio-actions{align-items:stretch}.audio-actions .group{flex:1}.small-btn{flex:1;font-size:12px;padding:8px}.speed{font-size:11px}.sentence{font-size:clamp(25px,6.4vw,34px);line-height:1.52;letter-spacing:-.8px}.hint-btn{margin-top:20px}.entry{margin-top:20px}.entry input{font-size:16px}.entry input::placeholder{font-size:13px}.panel-foot{padding:15px 12px;gap:14px}.status{font-size:10px;letter-spacing:.6px}.foot-buttons{width:100%;justify-content:stretch;gap:8px}.foot-btn{flex:1;padding:0 8px;font-size:11px;min-height:46px}.under{margin-top:34px}.under-head{align-items:stretch;flex-direction:column;gap:11px}.round-grid{gap:5px}.round{font-size:11px;min-height:39px;border-radius:7px}.all-grid{gap:4px}.all-grid .round{font-size:10px;min-height:31px}.credits{text-align:center}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  
+/* ABHI-UYEN PINK EDITION: outside black, answer card cream, neon pink */
+:root {
+  --neon:#ff2bc6;
+  --neon2:#ff70e0;
+  --paper:#fff8eb;
+  --ink:#20191e;
+  --dark:#080609;
+  --sub:#73645b;
+  --red:#d52836;
+  --cream:#f5eadb;
+  --line:#ebd8c3;
+  --soft:#fff4e8;
+}
+body {
+  color:#fff5fc;
+  background:radial-gradient(ellipse at 50% 22%,#25101f 0%,#100a12 35%,#050406 68%,#020203 100%);
+}
+.wrap{max-width:1220px;padding:30px 28px 42px}
+.topbar{margin-bottom:22px}
+.brand{color:#fff8fd}
+.topline,.count{color:#ded1df}
+.slash,.count strong{color:var(--neon)}
+.logo{background:var(--neon);color:#130411;box-shadow:0 0 20px #ff2bc64d}
+button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,audio:focus-visible{outline:3px solid var(--neon);outline-offset:3px}
+.panel{background:var(--paper);color:var(--ink);border:4px solid var(--neon);border-radius:24px;box-shadow:0 0 0 1px #ff8ce67a,0 9px 0 #2c1527,0 0 37px #ff2bc64b;overflow:hidden}
+.panel-main{min-height:555px;padding:24px 34px 28px}
+.heading .number,.number{background:#20101d;color:var(--neon)}
+.kicker{color:#53424d}
+.small-desc{color:#776b67}
+.head-aside{background:#fff1f9;border:1px solid #efc8df}
+.head-aside strong{color:#5b1746}
+.head-aside span{color:#725b6a}
+.center{padding:20px 9px 5px}
+.eyebrow{color:#876678}
+.audio-block{max-width:510px;margin:17px auto 23px;border:1px solid #edd8cc;border-radius:16px;padding:11px 14px;background:#fffdfa;box-shadow:0 5px 17px #1c10150d}
+.audio-title{margin-bottom:5px;font-size:11px;color:#645564;letter-spacing:.5px}
+.sound-icon{font-size:16px;color:#e02caa}
+audio{height:41px;accent-color:var(--neon)}
+.audio-actions{margin-top:7px;gap:7px}
+.audio-actions .group{gap:6px}
+.small-btn{min-height:32px;padding:6px 10px;font-size:11px;border-radius:8px;background:#fff6fb;border:1px solid #d9b8d0;color:#523049}
+.small-btn:hover{background:#fce7f6}
+.small-btn.is-on{background:#ffb3e7;border-color:#ef2abd;color:#50123d}
+.speed{font-size:11px;gap:5px;color:#5e4a58}
+.speed select{padding:5px 6px;border-color:#d4b1c8;background:#fff9fe;color:#35202e}
+.sentence{font-size:clamp(25px,3.1vw,39px);line-height:1.48;max-width:980px;color:#201a1d}
+.blank{border-bottom-color:#db76ba}
+.answer-red{color:var(--red);text-decoration-color:var(--red)}
+.hint-btn{margin-top:14px;border-color:#dda9c8;background:#fff4fb;color:#8c2666}
+.hint-btn:hover{background:#ffe5f5}
+.hint{color:#8b376e}
+.entry{margin-top:14px;max-width:625px}
+.entry input{min-height:47px;border-color:#e0bfd0;background:#fffdfc;color:#251923}
+.entry input:focus{border-color:var(--neon);outline:none;box-shadow:0 0 0 3px #ff2bc633}
+.check-row{margin-top:11px}
+.action{min-height:43px;padding:10px 15px;background:#241520;border-color:#241520;color:#fff5fb}
+.action.check{background:var(--neon);border-color:#e71ba9;color:#20091b}
+.action.alt{background:#fff6f9;color:#3b1a30;border-color:#301322}
+.feedback{margin-top:9px;min-height:16px}
+.feedback.good{color:#257038}
+.feedback.bad{color:#b12a45}
+.feedback.revealed{color:#a32f50}
+.translation{margin:15px auto 0;padding:14px 17px;max-width:760px;border-radius:13px;background:#fff0e9;border-left:5px solid var(--neon);box-shadow:0 2px 8px #a8878930;text-align:left}
+.translation[hidden]{display:none!important}
+.vi-label{color:#9a357e;font-size:10px;font-weight:950;letter-spacing:1.5px;margin-bottom:6px}
+.vi-text{color:#423038;font-size:16px;font-weight:680;line-height:1.6}
+.panel-foot{background:var(--cream);border-top:1px solid #e6d3c5;padding:13px 28px}
+.status{color:#74435e}
+.dot{background:var(--neon);box-shadow:0 0 0 4px #ff82dc63}
+.foot-btn{min-height:44px;background:#fffbf5;border-color:#301b28;color:#271a23}
+.foot-btn.primary{background:var(--neon);color:#22071a;border-color:#24111f;box-shadow:0 3px 0 #b31d83}
+.under{margin-top:27px}
+.under-head,.set-picker{color:#f4ddeb}
+.set-picker select{background:#171017;border:1px solid #8b3873;color:#fff0fa}
+.round-grid{margin:14px 0 18px}
+.round{border:1px solid #604354;background:#1c141d;color:#e9cada}
+.round:hover{border-color:var(--neon);background:#362134;color:#fff5fa}
+.round.active{background:var(--neon);border-color:var(--neon);color:#23081d;box-shadow:0 0 18px #ff2bc677}
+.round.done:not(.active){background:#562245;border-color:#ca4ba4;color:#fff5fb}
+.progress-row{color:#e6c9da}
+.progress-row .bar{background:#352235}
+.progress-row .bar span{background:var(--neon)}
+details.browser{border-top:1px solid #503448}
+details.browser summary{color:#f5d7ed}
+.credits{color:#b994a9}
+.toast{background:#29101f;color:#ffe0f4;border-color:var(--neon)}
+@media (max-width:960px){.panel-main{min-height:540px;padding:22px 24px}.center{padding:20px 0 5px}.wrap{padding:24px 17px 30px}}
+@media (max-width:640px){.wrap{padding:16px 10px 25px}.panel{border-width:3px}.panel-main{min-height:620px;padding:17px 14px 22px}.center{padding:20px 0 3px}.audio-block{max-width:100%;padding:10px 9px;margin:15px auto 19px}.audio-actions{gap:7px}.small-btn{font-size:11px;min-height:32px;padding:6px 8px}.sentence{font-size:clamp(24px,6vw,32px)}.translation{padding:12px}.vi-text{font-size:14px}.panel-foot{padding:12px 13px}}
+
+
+/* Hints: independent English and Vietnamese hints, no answer leakage */
+.hint-buttons{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;margin-top:13px}
+.hint-buttons .hint-btn{margin-top:0}
+.hint{min-height:0;margin:7px 0 0;max-width:700px;line-height:1.45}
+.en-hint{color:#693956;font-weight:750;font-size:14px}
+.en-hint:not(:empty):before{content:'EN HINT · ';font-size:11px;letter-spacing:1px;font-weight:950;color:#dc299e}
+#hint:not(:empty):before{content:'VI HINT · ';font-size:11px;letter-spacing:1px;font-weight:950;color:#dc299e}
+@media(max-width:640px){.hint-buttons{margin-top:12px;gap:7px}.hint-buttons .hint-btn{padding:8px 11px;font-size:11px}.en-hint{font-size:13px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="topbar">
+    <div class="brand"><span class="logo">AU</span><span>ABHI-UYEN <span class="slash">/</span> LISTENING LAB</span></div>
+    <div class="topline">LISTEN · FILL THE COLLOCATION · REPEAT</div>
+    <div class="count">CARD <strong id="cardCount">001 / 100</strong></div>
+  </header>
+  <main class="panel" aria-label="Listening collocation exercise">
+    <div class="panel-main">
+      <div class="panel-head">
+        <div>
+          <div class="heading"><span class="number" id="cardNumber">01</span><span class="kicker">LISTEN AND COMPLETE</span></div>
+          <p class="small-desc">Listen to the sentence. Type the missing collocation. Take your time.</p>
+        </div>
+        <div class="head-aside"><strong>NO TIME LIMIT</strong><span>Listen as many times as you need</span></div>
+      </div>
+      <div class="center">
+        <div class="eyebrow">PLAY THE AUDIO · FILL IN THE GAP</div>
+        <div class="audio-block">
+          <div class="audio-title"><span class="label-audio"><span class="sound-icon" aria-hidden="true">◉</span> SENTENCE AUDIO · BRITISH ENGLISH</span><span id="clipName">TRACK 001</span></div>
+          <audio id="player" controls preload="metadata" aria-label="Listen to the sentence; pause and seek using the audio controls">Your browser cannot play HTML5 audio.</audio>
+          <div class="audio-actions">
+            <div class="group">
+              <button class="small-btn" id="replayBtn" type="button" title="Play this sentence again from the beginning">↶ Replay from start</button>
+              <button class="small-btn" id="loopBtn" type="button" aria-pressed="false" title="Repeat the current sentence automatically">↻ Repeat: OFF</button>
+            </div>
+            <label class="speed">Speed <select id="speedSelect" aria-label="Audio playback speed"><option value="0.8">0.8×</option><option value="0.9">0.9×</option><option value="1" selected>1.0×</option><option value="1.1">1.1×</option><option value="1.25">1.25×</option></select></label>
+          </div>
+        </div>
+        <div id="sentence" class="sentence" aria-live="polite"></div>
+        <div class="hint-buttons" role="group" aria-label="Optional collocation hints">
+          <button id="hintEnBtn" class="hint-btn" type="button" aria-expanded="false" aria-controls="hintEn">+ Simple English hint</button>
+          <button id="hintBtn" class="hint-btn" type="button" aria-expanded="false" aria-controls="hint">+ Vietnamese hint</button>
+        </div>
+        <div id="hintEn" class="hint en-hint" aria-live="polite"></div>
+        <div id="hint" class="hint" aria-live="polite"></div>
+        <div class="entry">
+          <label for="fillAnswer">YOUR COLLOCATION</label>
+          <input type="text" id="fillAnswer" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Type what you hear…">
+          <div class="check-row">
+            <button id="checkBtn" class="action check" type="button">✓ Check my answer</button>
+            <button id="revealBtn" class="action alt" type="button">Show Full Answer · EN + VI</button>
+            <button id="tryAgainBtn" class="action alt" type="button" hidden>↻ Try again</button>
+          </div>
+          <div id="feedback" class="feedback" role="status" aria-live="polite"></div>
+          <div id="translation" class="translation" hidden><div class="vi-label">FULL VIETNAMESE TRANSLATION</div><div id="translationText" class="vi-text"></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="panel-foot">
+      <div class="status"><span class="dot" aria-hidden="true"></span><span id="statusText">AUDIO READY · LISTEN AT YOUR OWN PACE</span></div>
+      <div class="foot-buttons"><button id="previousBtn" type="button" class="foot-btn">← Previous</button><button id="nextBtn" type="button" class="foot-btn primary">Next →</button></div>
+    </div>
+  </main>
+  <section class="under" aria-label="Course navigation">
+    <div class="under-head"><strong id="setTitle">SET 01 · SENTENCES 001–010</strong><label class="set-picker">Jump to set <select id="setPicker" aria-label="Jump to a set of ten sentences"></select></label></div>
+    <nav id="roundGrid" class="round-grid" aria-label="Sentences in this set"></nav>
+    <div class="progress-row"><span id="progressText">0 / 100 completed</span><div class="bar" role="progressbar" aria-label="Cards answered or revealed" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar"><span id="progressFill"></span></div></div>
+    <details class="browser"><summary>Browse all 100 audio cards</summary><nav class="all-grid" id="allGrid" aria-label="Browse all sentences"></nav></details>
+    <div class="credits">Designed by Abhi-Uyen · British English · 100 MP3 clips · GitHub Pages ready</div>
+  </section>
+</div>
+<div id="toast" class="toast" role="status"></div>
+<script>
+'use strict';
+const CARDS = [{"id":1,"set":1,"sentence":"A strong friendship is built on mutual respect and trust.","before":"A strong friendship is built on ","answer":"mutual respect","after":" and trust.","hint":"sự tôn trọng lẫn nhau","audio":"001.mp3","vi":"Một tình bạn bền chặt được xây dựng trên sự tôn trọng lẫn nhau và niềm tin.","hintEn":"When two people value and treat each other fairly."},{"id":2,"set":1,"sentence":"Our school has banned single-use plastics in the canteen.","before":"Our school has banned ","answer":"single-use plastics","after":" in the canteen.","hint":"nhựa dùng một lần","audio":"002.mp3","vi":"Trường chúng tôi đã cấm sử dụng các sản phẩm nhựa dùng một lần trong căng-tin.","hintEn":"Plastic products that are thrown away after one use."},{"id":3,"set":1,"sentence":"Volunteers delivered humanitarian assistance to families affected by the flood.","before":"Volunteers delivered ","answer":"humanitarian assistance","after":" to families affected by the flood.","hint":"viện trợ nhân đạo","audio":"003.mp3","vi":"Các tình nguyện viên đã trao viện trợ nhân đạo cho những gia đình bị ảnh hưởng bởi trận lũ.","hintEn":"Help given to people suffering from a disaster or crisis."},{"id":4,"set":1,"sentence":"Better healthcare has increased life expectancy in many countries.","before":"Better healthcare has increased ","answer":"life expectancy","after":" in many countries.","hint":"tuổi thọ","audio":"004.mp3","vi":"Dịch vụ chăm sóc sức khỏe tốt hơn đã làm tăng tuổi thọ ở nhiều quốc gia.","hintEn":"The average number of years people are expected to live."},{"id":5,"set":1,"sentence":"Industrial growth can lead to environmental degradation if poorly managed.","before":"Industrial growth can lead to ","answer":"environmental degradation","after":" if poorly managed.","hint":"suy thoái môi trường","audio":"005.mp3","vi":"Nếu không được quản lý tốt, sự phát triển công nghiệp có thể dẫn đến suy thoái môi trường.","hintEn":"When nature becomes damaged or less healthy."},{"id":6,"set":1,"sentence":"Open discussions can help reduce the generational divide within families.","before":"Open discussions can help reduce the ","answer":"generational divide","after":" within families.","hint":"khoảng cách thế hệ","audio":"006.mp3","vi":"Những cuộc thảo luận cởi mở có thể giúp thu hẹp khoảng cách thế hệ trong gia đình.","hintEn":"Differences in attitudes between younger and older people."},{"id":7,"set":1,"sentence":"Music provides young people with a form of artistic expression.","before":"Music provides young people with a form of ","answer":"artistic expression","after":".","hint":"biểu đạt nghệ thuật","audio":"007.mp3","vi":"Âm nhạc mang đến cho người trẻ một hình thức biểu đạt nghệ thuật.","hintEn":"Showing ideas and feelings through creative work."},{"id":8,"set":1,"sentence":"The city needs to invest more in urban infrastructure.","before":"The city needs to invest more in ","answer":"urban infrastructure","after":".","hint":"cơ sở hạ tầng đô thị","audio":"008.mp3","vi":"Thành phố cần đầu tư nhiều hơn vào cơ sở hạ tầng đô thị.","hintEn":"Roads, bridges and public systems in a city."},{"id":9,"set":1,"sentence":"Cultural assimilation may cause minority groups to lose their traditions.","before":"","answer":"Cultural assimilation","after":" may cause minority groups to lose their traditions.","hint":"sự đồng hóa văn hóa","audio":"009.mp3","vi":"Sự đồng hóa văn hóa có thể khiến các nhóm thiểu số đánh mất truyền thống của mình.","hintEn":"When a group slowly loses its original culture."},{"id":10,"set":1,"sentence":"Her remarkable achievements have inspired students across the country.","before":"Her ","answer":"remarkable achievements","after":" have inspired students across the country.","hint":"thành tựu nổi bật","audio":"010.mp3","vi":"Những thành tựu nổi bật của cô ấy đã truyền cảm hứng cho học sinh trên khắp cả nước.","hintEn":"Important successes that deserve admiration."},{"id":11,"set":2,"sentence":"Public transport can help reduce greenhouse gas emissions.","before":"Public transport can help reduce ","answer":"greenhouse gas emissions","after":".","hint":"khí thải gây hiệu ứng nhà kính","audio":"011.mp3","vi":"Giao thông công cộng có thể giúp giảm lượng khí thải gây hiệu ứng nhà kính.","hintEn":"Gases released into the air that warm the planet."},{"id":12,"set":2,"sentence":"Technological advancement has changed the way people communicate.","before":"","answer":"Technological advancement","after":" has changed the way people communicate.","hint":"tiến bộ công nghệ","audio":"012.mp3","vi":"Sự tiến bộ của công nghệ đã thay đổi cách mọi người giao tiếp.","hintEn":"Progress that makes modern tools and systems better."},{"id":13,"set":2,"sentence":"A sedentary lifestyle can increase the risk of health problems.","before":"A ","answer":"sedentary lifestyle","after":" can increase the risk of health problems.","hint":"lối sống ít vận động","audio":"013.mp3","vi":"Lối sống ít vận động có thể làm tăng nguy cơ mắc các vấn đề sức khỏe.","hintEn":"A way of living with very little physical activity."},{"id":14,"set":2,"sentence":"She showed extraordinary determination to complete her studies.","before":"She showed ","answer":"extraordinary determination","after":" to complete her studies.","hint":"quyết tâm phi thường","audio":"014.mp3","vi":"Cô ấy đã thể hiện quyết tâm phi thường để hoàn thành việc học.","hintEn":"An unusually strong desire to achieve a goal."},{"id":15,"set":2,"sentence":"Regional cooperation is essential for tackling shared problems.","before":"","answer":"Regional cooperation","after":" is essential for tackling shared problems.","hint":"hợp tác khu vực","audio":"015.mp3","vi":"Hợp tác khu vực đóng vai trò thiết yếu trong việc giải quyết các vấn đề chung.","hintEn":"Countries or areas working together to solve problems."},{"id":16,"set":2,"sentence":"Both parents should share domestic responsibilities equally.","before":"Both parents should share ","answer":"domestic responsibilities","after":" equally.","hint":"trách nhiệm trong gia đình","audio":"016.mp3","vi":"Cả cha và mẹ nên chia sẻ trách nhiệm gia đình một cách bình đẳng.","hintEn":"Tasks and duties shared by people at home."},{"id":17,"set":2,"sentence":"Rapid urbanisation has increased the demand for public services.","before":"","answer":"Rapid urbanisation","after":" has increased the demand for public services.","hint":"đô thị hóa nhanh chóng","audio":"017.mp3","vi":"Quá trình đô thị hóa nhanh chóng đã làm tăng nhu cầu về các dịch vụ công.","hintEn":"When a city grows and changes very quickly."},{"id":18,"set":2,"sentence":"Applicants must have relevant professional qualifications for this position.","before":"Applicants must have relevant ","answer":"professional qualifications","after":" for this position.","hint":"trình độ chuyên môn","audio":"018.mp3","vi":"Ứng viên phải có trình độ chuyên môn phù hợp với vị trí này.","hintEn":"Certificates and skills needed for a particular career."},{"id":19,"set":2,"sentence":"The loss of a species can create an ecological imbalance.","before":"The loss of a species can create an ","answer":"ecological imbalance","after":".","hint":"mất cân bằng sinh thái","audio":"019.mp3","vi":"Sự biến mất của một loài có thể gây ra tình trạng mất cân bằng sinh thái.","hintEn":"When nature's different parts are no longer in balance."},{"id":20,"set":2,"sentence":"A lack of communication often leads to intergenerational conflict.","before":"A lack of communication often leads to ","answer":"intergenerational conflict","after":".","hint":"xung đột giữa các thế hệ","audio":"020.mp3","vi":"Thiếu giao tiếp thường dẫn đến xung đột giữa các thế hệ.","hintEn":"Disagreement between people of different age groups."},{"id":21,"set":3,"sentence":"Urban sprawl can destroy farmland surrounding a city.","before":"","answer":"Urban sprawl","after":" can destroy farmland surrounding a city.","hint":"đô thị phát triển tràn lan","audio":"021.mp3","vi":"Sự mở rộng đô thị tràn lan có thể phá hủy đất nông nghiệp xung quanh thành phố.","hintEn":"When a city spreads into the countryside."},{"id":22,"set":3,"sentence":"The charity provides free lessons for underprivileged children.","before":"The charity provides free lessons for ","answer":"underprivileged children","after":".","hint":"trẻ em thiệt thòi","audio":"022.mp3","vi":"Tổ chức từ thiện này cung cấp các lớp học miễn phí cho trẻ em có hoàn cảnh thiệt thòi.","hintEn":"Young people who do not have the same advantages as others."},{"id":23,"set":3,"sentence":"Many countries are trying to reduce fossil fuel consumption.","before":"Many countries are trying to reduce ","answer":"fossil fuel consumption","after":".","hint":"tiêu thụ nhiên liệu hóa thạch","audio":"023.mp3","vi":"Nhiều quốc gia đang cố gắng giảm mức tiêu thụ nhiên liệu hóa thạch.","hintEn":"Using coal, oil or gas for energy."},{"id":24,"set":3,"sentence":"The shop has replaced disposable packaging with reusable containers.","before":"The shop has replaced ","answer":"disposable packaging","after":" with reusable containers.","hint":"bao bì dùng một lần","audio":"024.mp3","vi":"Cửa hàng đã thay thế bao bì dùng một lần bằng các loại hộp đựng có thể tái sử dụng.","hintEn":"Wrapping that is thrown away after just one use."},{"id":25,"set":3,"sentence":"Traditional festivals help communities maintain their cultural identity.","before":"Traditional festivals help communities maintain their ","answer":"cultural identity","after":".","hint":"bản sắc văn hóa","audio":"025.mp3","vi":"Các lễ hội truyền thống giúp cộng đồng duy trì bản sắc văn hóa của mình.","hintEn":"The traditions and values that make a group unique."},{"id":26,"set":3,"sentence":"This groundbreaking invention made clean water more accessible.","before":"This ","answer":"groundbreaking invention","after":" made clean water more accessible.","hint":"phát minh đột phá","audio":"026.mp3","vi":"Phát minh đột phá này đã giúp nhiều người tiếp cận nước sạch dễ dàng hơn.","hintEn":"A completely new creation that changes how things work."},{"id":27,"set":3,"sentence":"The students performed a musical composition written by their teacher.","before":"The students performed a ","answer":"musical composition","after":" written by their teacher.","hint":"tác phẩm âm nhạc","audio":"027.mp3","vi":"Các học sinh đã biểu diễn một tác phẩm âm nhạc do giáo viên của mình sáng tác.","hintEn":"A piece of music written by someone."},{"id":28,"set":3,"sentence":"Economic integration can create new markets for local businesses.","before":"","answer":"Economic integration","after":" can create new markets for local businesses.","hint":"hội nhập kinh tế","audio":"028.mp3","vi":"Hội nhập kinh tế có thể tạo ra những thị trường mới cho các doanh nghiệp địa phương.","hintEn":"Countries becoming more closely connected through trade."},{"id":29,"set":3,"sentence":"Rural-to-urban migration has increased pressure on city housing.","before":"","answer":"Rural-to-urban migration","after":" has increased pressure on city housing.","hint":"di cư từ nông thôn ra thành thị","audio":"029.mp3","vi":"Việc di cư từ nông thôn ra thành thị đã làm gia tăng áp lực lên nhà ở đô thị.","hintEn":"Moving from the countryside to a city to live."},{"id":30,"set":3,"sentence":"Learning another language can improve your career prospects.","before":"Learning another language can improve your ","answer":"career prospects","after":".","hint":"triển vọng nghề nghiệp","audio":"030.mp3","vi":"Học thêm một ngôn ngữ khác có thể cải thiện triển vọng nghề nghiệp của bạn.","hintEn":"The chances of finding and developing a good job."},{"id":31,"set":4,"sentence":"Resource depletion threatens the future of many industries.","before":"","answer":"Resource depletion","after":" threatens the future of many industries.","hint":"cạn kiệt tài nguyên","audio":"031.mp3","vi":"Sự cạn kiệt tài nguyên đang đe dọa tương lai của nhiều ngành công nghiệp.","hintEn":"Using up natural supplies until very little remains."},{"id":32,"set":4,"sentence":"Her unwavering commitment to education earned her public recognition.","before":"Her ","answer":"unwavering commitment","after":" to education earned her public recognition.","hint":"sự cam kết không lay chuyển","audio":"032.mp3","vi":"Sự tận tâm không lay chuyển của cô ấy đối với giáo dục đã giúp cô được công chúng ghi nhận.","hintEn":"Strong dedication that does not weaken over time."},{"id":33,"set":4,"sentence":"Teenagers should learn to balance household obligations and schoolwork.","before":"Teenagers should learn to balance ","answer":"household obligations","after":" and schoolwork.","hint":"nghĩa vụ trong gia đình","audio":"033.mp3","vi":"Thanh thiếu niên nên học cách cân bằng giữa trách nhiệm gia đình và việc học ở trường.","hintEn":"The duties people must complete in their home life."},{"id":34,"set":4,"sentence":"Living with a chronic illness can affect a person's daily routine.","before":"Living with a ","answer":"chronic illness","after":" can affect a person's daily routine.","hint":"bệnh mãn tính","audio":"034.mp3","vi":"Sống chung với một căn bệnh mãn tính có thể ảnh hưởng đến sinh hoạt hằng ngày của một người.","hintEn":"A health problem that lasts for a long time."},{"id":35,"set":4,"sentence":"The festival celebrates the ethnic diversity of the region.","before":"The festival celebrates the ","answer":"ethnic diversity","after":" of the region.","hint":"sự đa dạng sắc tộc","audio":"035.mp3","vi":"Lễ hội tôn vinh sự đa dạng sắc tộc của khu vực này.","hintEn":"The presence of people from many different cultural backgrounds."},{"id":36,"set":4,"sentence":"The project offers training to people in marginalised communities.","before":"The project offers training to people in ","answer":"marginalised communities","after":".","hint":"cộng đồng bị gạt ra bên lề","audio":"036.mp3","vi":"Dự án cung cấp chương trình đào tạo cho những người thuộc các cộng đồng yếu thế, bị gạt ra bên lề xã hội.","hintEn":"Groups that are often excluded or treated unfairly."},{"id":37,"set":4,"sentence":"He demonstrated exceptional talent at an early age.","before":"He demonstrated ","answer":"exceptional talent","after":" at an early age.","hint":"tài năng xuất chúng","audio":"037.mp3","vi":"Anh ấy đã thể hiện tài năng xuất chúng ngay từ khi còn nhỏ.","hintEn":"A very special natural ability that few people have."},{"id":38,"set":4,"sentence":"Young people often question the conventional beliefs of their parents.","before":"Young people often question the ","answer":"conventional beliefs","after":" of their parents.","hint":"quan niệm truyền thống","audio":"038.mp3","vi":"Người trẻ thường đặt câu hỏi về những quan niệm truyền thống của cha mẹ.","hintEn":"Ideas accepted mainly because people have believed them for years."},{"id":39,"set":4,"sentence":"Areas with high population density need efficient public transport.","before":"Areas with high ","answer":"population density","after":" need efficient public transport.","hint":"mật độ dân số","audio":"039.mp3","vi":"Những khu vực có mật độ dân số cao cần hệ thống giao thông công cộng hiệu quả.","hintEn":"The number of people living in a particular area."},{"id":40,"set":4,"sentence":"Recycling helps reduce the amount of household waste.","before":"Recycling helps reduce the amount of ","answer":"household waste","after":".","hint":"rác thải sinh hoạt","audio":"040.mp3","vi":"Tái chế giúp giảm lượng rác thải sinh hoạt.","hintEn":"Rubbish produced by people in their homes."},{"id":41,"set":5,"sentence":"Farmers are struggling to cope with extreme weather conditions.","before":"Farmers are struggling to cope with ","answer":"extreme weather conditions","after":".","hint":"điều kiện thời tiết khắc nghiệt","audio":"041.mp3","vi":"Nông dân đang gặp khó khăn trong việc ứng phó với điều kiện thời tiết khắc nghiệt.","hintEn":"Severe weather, such as dangerous storms or heat."},{"id":42,"set":5,"sentence":"Parental involvement can encourage children to perform better at school.","before":"","answer":"Parental involvement","after":" can encourage children to perform better at school.","hint":"sự tham gia của cha mẹ","audio":"042.mp3","vi":"Sự tham gia của cha mẹ có thể khuyến khích trẻ đạt kết quả học tập tốt hơn.","hintEn":"Parents taking an active part in their children's lives."},{"id":43,"set":5,"sentence":"The athlete became an inspirational figure for young people.","before":"The athlete became an ","answer":"inspirational figure","after":" for young people.","hint":"hình mẫu truyền cảm hứng","audio":"043.mp3","vi":"Vận động viên ấy đã trở thành một nhân vật truyền cảm hứng cho giới trẻ.","hintEn":"A person whose life or work motivates others."},{"id":44,"set":5,"sentence":"Sustainable consumption involves choosing products with less environmental impact.","before":"","answer":"Sustainable consumption","after":" involves choosing products with less environmental impact.","hint":"tiêu dùng bền vững","audio":"044.mp3","vi":"Tiêu dùng bền vững bao gồm việc lựa chọn những sản phẩm có ít tác động đến môi trường hơn.","hintEn":"Buying and using things in a way that protects nature."},{"id":45,"set":5,"sentence":"The government plans to build more affordable housing.","before":"The government plans to build more ","answer":"affordable housing","after":".","hint":"nhà ở giá phải chăng","audio":"045.mp3","vi":"Chính phủ có kế hoạch xây dựng thêm nhà ở với giá cả phải chăng.","hintEn":"Homes that ordinary people can afford to buy or rent."},{"id":46,"set":5,"sentence":"The hospital uses cutting-edge technology to diagnose diseases.","before":"The hospital uses ","answer":"cutting-edge technology","after":" to diagnose diseases.","hint":"công nghệ tiên tiến","audio":"046.mp3","vi":"Bệnh viện sử dụng công nghệ tiên tiến để chẩn đoán bệnh.","hintEn":"Very advanced and modern tools or methods."},{"id":47,"set":5,"sentence":"Graduates need practical experience in a competitive job market.","before":"Graduates need practical experience in a ","answer":"competitive job market","after":".","hint":"thị trường việc làm cạnh tranh","audio":"047.mp3","vi":"Sinh viên mới tốt nghiệp cần kinh nghiệm thực tế trong một thị trường việc làm đầy cạnh tranh.","hintEn":"A situation in which many people compete for work."},{"id":48,"set":5,"sentence":"Despite their conflicting perspectives, they reached an agreement.","before":"Despite their ","answer":"conflicting perspectives","after":", they reached an agreement.","hint":"những quan điểm trái ngược","audio":"048.mp3","vi":"Mặc dù có những quan điểm trái ngược nhau, họ vẫn đạt được thỏa thuận.","hintEn":"Different opinions that do not agree with each other."},{"id":49,"set":5,"sentence":"The two countries established diplomatic relations many years ago.","before":"The two countries established ","answer":"diplomatic relations","after":" many years ago.","hint":"quan hệ ngoại giao","audio":"049.mp3","vi":"Hai quốc gia đã thiết lập quan hệ ngoại giao từ nhiều năm trước.","hintEn":"Official connections between countries."},{"id":50,"set":5,"sentence":"A nutritional deficiency can result from a poorly balanced diet.","before":"A ","answer":"nutritional deficiency","after":" can result from a poorly balanced diet.","hint":"sự thiếu hụt dinh dưỡng","audio":"050.mp3","vi":"Tình trạng thiếu hụt dinh dưỡng có thể bắt nguồn từ chế độ ăn uống thiếu cân đối.","hintEn":"Not getting enough essential vitamins or other nutrients."},{"id":51,"set":6,"sentence":"The countries signed bilateral agreements to improve trade.","before":"The countries signed ","answer":"bilateral agreements","after":" to improve trade.","hint":"thỏa thuận song phương","audio":"051.mp3","vi":"Các quốc gia đã ký những thỏa thuận song phương nhằm thúc đẩy thương mại.","hintEn":"Formal deals made between two countries or groups."},{"id":52,"set":6,"sentence":"Her philanthropic activities helped fund several rural schools.","before":"Her ","answer":"philanthropic activities","after":" helped fund several rural schools.","hint":"hoạt động thiện nguyện","audio":"052.mp3","vi":"Những hoạt động thiện nguyện của cô ấy đã góp phần tài trợ cho một số trường học ở nông thôn.","hintEn":"Actions that help others, often through donations or service."},{"id":53,"set":6,"sentence":"His musical inclination became clear when he started playing the piano.","before":"His ","answer":"musical inclination","after":" became clear when he started playing the piano.","hint":"thiên hướng âm nhạc","audio":"053.mp3","vi":"Thiên hướng âm nhạc của anh ấy trở nên rõ ràng khi anh bắt đầu chơi đàn piano.","hintEn":"A natural interest or ability in making music."},{"id":54,"set":6,"sentence":"Rising sea levels threaten homes in coastal areas.","before":"","answer":"Rising sea levels","after":" threaten homes in coastal areas.","hint":"mực nước biển dâng","audio":"054.mp3","vi":"Mực nước biển dâng đang đe dọa nhà ở tại các khu vực ven biển.","hintEn":"When ocean water becomes higher than before."},{"id":55,"set":6,"sentence":"Schools should take action against racial discrimination.","before":"Schools should take action against ","answer":"racial discrimination","after":".","hint":"phân biệt chủng tộc","audio":"055.mp3","vi":"Các trường học nên hành động để chống lại sự phân biệt chủng tộc.","hintEn":"Unfair treatment of people because of their race."},{"id":56,"set":6,"sentence":"The research led to a scientific breakthrough in medicine.","before":"The research led to a ","answer":"scientific breakthrough","after":" in medicine.","hint":"bước đột phá khoa học","audio":"056.mp3","vi":"Nghiên cứu này đã dẫn đến một bước đột phá khoa học trong y học.","hintEn":"An important new discovery in science."},{"id":57,"set":6,"sentence":"Housing tends to be expensive in major metropolitan areas.","before":"Housing tends to be expensive in major ","answer":"metropolitan areas","after":".","hint":"khu vực đô thị lớn","audio":"057.mp3","vi":"Nhà ở thường đắt đỏ tại những khu vực đô thị lớn.","hintEn":"Large cities and the areas surrounding them."},{"id":58,"set":6,"sentence":"Overcrowded neighbourhoods often lack sufficient public facilities.","before":"","answer":"Overcrowded neighbourhoods","after":" often lack sufficient public facilities.","hint":"khu dân cư quá đông đúc","audio":"058.mp3","vi":"Các khu dân cư quá đông đúc thường thiếu những công trình công cộng cần thiết.","hintEn":"Places where too many people live close together."},{"id":59,"set":6,"sentence":"Teamwork and communication are valuable transferable skills.","before":"Teamwork and communication are valuable ","answer":"transferable skills","after":".","hint":"kỹ năng có thể chuyển đổi","audio":"059.mp3","vi":"Kỹ năng làm việc nhóm và giao tiếp là những kỹ năng có thể áp dụng trong nhiều công việc khác nhau và rất có giá trị.","hintEn":"Abilities that are useful in different jobs."},{"id":60,"set":6,"sentence":"Chemical leaks can cause serious soil contamination.","before":"Chemical leaks can cause serious ","answer":"soil contamination","after":".","hint":"ô nhiễm đất","audio":"060.mp3","vi":"Rò rỉ hóa chất có thể gây ô nhiễm đất nghiêm trọng.","hintEn":"When harmful substances make the ground unsafe."},{"id":61,"set":7,"sentence":"Sports programmes can promote social inclusion among teenagers.","before":"Sports programmes can promote ","answer":"social inclusion","after":" among teenagers.","hint":"hòa nhập xã hội","audio":"061.mp3","vi":"Các chương trình thể thao có thể thúc đẩy sự hòa nhập xã hội của thanh thiếu niên.","hintEn":"Making everyone feel accepted and able to take part."},{"id":62,"set":7,"sentence":"Regular practice helps students develop their artistic creativity.","before":"Regular practice helps students develop their ","answer":"artistic creativity","after":".","hint":"sự sáng tạo nghệ thuật","audio":"062.mp3","vi":"Việc luyện tập thường xuyên giúp học sinh phát triển khả năng sáng tạo nghệ thuật.","hintEn":"The ability to produce new and imaginative art."},{"id":63,"set":7,"sentence":"Intelligent transport systems can reduce delays during rush hour.","before":"","answer":"Intelligent transport systems","after":" can reduce delays during rush hour.","hint":"hệ thống giao thông thông minh","audio":"063.mp3","vi":"Hệ thống giao thông thông minh có thể giảm tình trạng chậm trễ trong giờ cao điểm.","hintEn":"Smart technology that helps people travel more smoothly."},{"id":64,"set":7,"sentence":"She became an influential personality in the world of fashion.","before":"She became an ","answer":"influential personality","after":" in the world of fashion.","hint":"nhân vật có ảnh hưởng","audio":"064.mp3","vi":"Cô ấy đã trở thành một nhân vật có ảnh hưởng trong giới thời trang.","hintEn":"A person who can strongly affect other people's choices."},{"id":65,"set":7,"sentence":"Excessive consumption of natural resources damages the environment.","before":"","answer":"Excessive consumption","after":" of natural resources damages the environment.","hint":"tiêu thụ quá mức","audio":"065.mp3","vi":"Việc tiêu thụ quá mức các nguồn tài nguyên thiên nhiên gây tổn hại đến môi trường.","hintEn":"Using or buying more than is really necessary."},{"id":66,"set":7,"sentence":"The council introduced stricter rules for waste disposal.","before":"The council introduced stricter rules for ","answer":"waste disposal","after":".","hint":"xử lý chất thải","audio":"066.mp3","vi":"Hội đồng địa phương đã ban hành những quy định nghiêm ngặt hơn về xử lý chất thải.","hintEn":"Getting rid of rubbish in a safe and organised way."},{"id":67,"set":7,"sentence":"High parental expectations may put pressure on teenagers.","before":"High ","answer":"parental expectations","after":" may put pressure on teenagers.","hint":"kỳ vọng của cha mẹ","audio":"067.mp3","vi":"Kỳ vọng quá cao của cha mẹ có thể tạo áp lực lên thanh thiếu niên.","hintEn":"What parents believe their children should achieve."},{"id":68,"set":7,"sentence":"Regular exercise can improve psychological well-being.","before":"Regular exercise can improve ","answer":"psychological well-being","after":".","hint":"sức khỏe tâm lý","audio":"068.mp3","vi":"Tập thể dục thường xuyên có thể cải thiện sức khỏe tâm lý.","hintEn":"Feeling mentally and emotionally healthy."},{"id":69,"set":7,"sentence":"Language lessons can support cultural integration in local communities.","before":"Language lessons can support ","answer":"cultural integration","after":" in local communities.","hint":"hội nhập văn hóa","audio":"069.mp3","vi":"Các lớp học ngôn ngữ có thể hỗ trợ quá trình hòa nhập văn hóa tại cộng đồng địa phương.","hintEn":"People from different cultures becoming part of one community."},{"id":70,"set":7,"sentence":"Many people have a strong emotional attachment to their childhood home.","before":"Many people have a strong ","answer":"emotional attachment","after":" to their childhood home.","hint":"gắn bó về mặt cảm xúc","audio":"070.mp3","vi":"Nhiều người có sự gắn bó sâu sắc về mặt cảm xúc với ngôi nhà thời thơ ấu của mình.","hintEn":"A strong feeling of connection to someone or something."},{"id":71,"set":8,"sentence":"Their ideological differences made it difficult to reach an agreement.","before":"Their ","answer":"ideological differences","after":" made it difficult to reach an agreement.","hint":"khác biệt về tư tưởng","audio":"071.mp3","vi":"Những khác biệt về tư tưởng khiến họ khó đạt được thỏa thuận.","hintEn":"Disagreements caused by different political or social ideas."},{"id":72,"set":8,"sentence":"The campaign aims to raise environmental awareness among students.","before":"The campaign aims to raise ","answer":"environmental awareness","after":" among students.","hint":"nhận thức về môi trường","audio":"072.mp3","vi":"Chiến dịch nhằm nâng cao nhận thức về môi trường cho học sinh.","hintEn":"Knowing about environmental problems and why they matter."},{"id":73,"set":8,"sentence":"Housing shortages have forced many families to move farther away.","before":"","answer":"Housing shortages","after":" have forced many families to move farther away.","hint":"tình trạng thiếu nhà ở","audio":"073.mp3","vi":"Tình trạng thiếu nhà ở đã buộc nhiều gia đình phải chuyển đến những nơi xa hơn.","hintEn":"When there are not enough homes for everyone."},{"id":74,"set":8,"sentence":"Safety training helps workers avoid common occupational hazards.","before":"Safety training helps workers avoid common ","answer":"occupational hazards","after":".","hint":"rủi ro nghề nghiệp","audio":"074.mp3","vi":"Đào tạo về an toàn giúp người lao động tránh những rủi ro nghề nghiệp thường gặp.","hintEn":"Dangers that people may face while doing their jobs."},{"id":75,"set":8,"sentence":"The laboratory is equipped with sophisticated equipment.","before":"The laboratory is equipped with ","answer":"sophisticated equipment","after":".","hint":"thiết bị tinh vi","audio":"075.mp3","vi":"Phòng thí nghiệm được trang bị các thiết bị hiện đại, tinh vi.","hintEn":"Advanced tools or machines made for complex work."},{"id":76,"set":8,"sentence":"Shared meals can strengthen family cohesion.","before":"Shared meals can strengthen ","answer":"family cohesion","after":".","hint":"sự gắn kết gia đình","audio":"076.mp3","vi":"Những bữa ăn chung có thể tăng cường sự gắn kết trong gia đình.","hintEn":"Strong relationships and a sense of unity in a family."},{"id":77,"set":8,"sentence":"Cultural exchange allows students to learn about different traditions.","before":"","answer":"Cultural exchange","after":" allows students to learn about different traditions.","hint":"giao lưu văn hóa","audio":"077.mp3","vi":"Giao lưu văn hóa giúp học sinh tìm hiểu những truyền thống khác nhau.","hintEn":"People sharing traditions and learning about other cultures."},{"id":78,"set":8,"sentence":"Despite his humble beginnings, he became a successful businessman.","before":"Despite his ","answer":"humble beginnings","after":", he became a successful businessman.","hint":"xuất thân khiêm tốn","audio":"078.mp3","vi":"Mặc dù có xuất thân khiêm tốn, anh ấy đã trở thành một doanh nhân thành đạt.","hintEn":"Starting life with very little money or social advantage."},{"id":79,"set":8,"sentence":"The destruction of forests can have irreversible consequences.","before":"The destruction of forests can have ","answer":"irreversible consequences","after":".","hint":"hậu quả không thể đảo ngược","audio":"079.mp3","vi":"Việc phá hủy rừng có thể gây ra những hậu quả không thể đảo ngược.","hintEn":"Results that cannot be changed or undone."},{"id":80,"set":8,"sentence":"Investing in preventive healthcare can reduce future medical costs.","before":"Investing in ","answer":"preventive healthcare","after":" can reduce future medical costs.","hint":"chăm sóc sức khỏe dự phòng","audio":"080.mp3","vi":"Đầu tư vào chăm sóc sức khỏe dự phòng có thể giảm chi phí y tế trong tương lai.","hintEn":"Medical care that aims to stop illness before it starts."},{"id":81,"set":9,"sentence":"Artists have the right to protect their intellectual property.","before":"Artists have the right to protect their ","answer":"intellectual property","after":".","hint":"sở hữu trí tuệ","audio":"081.mp3","vi":"Các nghệ sĩ có quyền bảo vệ tài sản trí tuệ của mình.","hintEn":"Ideas or creations that the law protects from being copied."},{"id":82,"set":9,"sentence":"Intercultural communication is essential in international workplaces.","before":"","answer":"Intercultural communication","after":" is essential in international workplaces.","hint":"giao tiếp liên văn hóa","audio":"082.mp3","vi":"Giao tiếp liên văn hóa là điều thiết yếu tại các môi trường làm việc quốc tế.","hintEn":"People from different cultures sharing information and ideas."},{"id":83,"set":9,"sentence":"Energy-efficient buildings can reduce electricity bills significantly.","before":"","answer":"Energy-efficient buildings","after":" can reduce electricity bills significantly.","hint":"công trình tiết kiệm năng lượng","audio":"083.mp3","vi":"Những tòa nhà tiết kiệm năng lượng có thể giảm đáng kể hóa đơn tiền điện.","hintEn":"Buildings designed to use less power."},{"id":84,"set":9,"sentence":"The new railway has created economic opportunities for local residents.","before":"The new railway has created ","answer":"economic opportunities","after":" for local residents.","hint":"cơ hội kinh tế","audio":"084.mp3","vi":"Tuyến đường sắt mới đã tạo ra những cơ hội kinh tế cho người dân địa phương.","hintEn":"Chances to earn money or improve someone's financial situation."},{"id":85,"set":9,"sentence":"A demanding workload can lead to stress and exhaustion.","before":"A ","answer":"demanding workload","after":" can lead to stress and exhaustion.","hint":"khối lượng công việc nặng nề","audio":"085.mp3","vi":"Khối lượng công việc nặng nề có thể dẫn đến căng thẳng và kiệt sức.","hintEn":"A large amount of difficult work that must be completed."},{"id":86,"set":9,"sentence":"Widespread deforestation has destroyed the homes of many wild animals.","before":"","answer":"Widespread deforestation","after":" has destroyed the homes of many wild animals.","hint":"nạn phá rừng trên diện rộng","audio":"086.mp3","vi":"Nạn phá rừng trên diện rộng đã phá hủy môi trường sống của nhiều loài động vật hoang dã.","hintEn":"The large-scale cutting down of forests."},{"id":87,"set":9,"sentence":"Effective waste segregation makes recycling much easier.","before":"Effective ","answer":"waste segregation","after":" makes recycling much easier.","hint":"phân loại rác thải","audio":"087.mp3","vi":"Việc phân loại rác thải hiệu quả giúp công tác tái chế dễ dàng hơn nhiều.","hintEn":"Separating different types of rubbish for recycling."},{"id":88,"set":9,"sentence":"The park was improved through active community engagement.","before":"The park was improved through active ","answer":"community engagement","after":".","hint":"sự tham gia của cộng đồng","audio":"088.mp3","vi":"Công viên đã được cải thiện nhờ sự tham gia tích cực của cộng đồng.","hintEn":"Local people actively helping with shared activities."},{"id":89,"set":9,"sentence":"Peaceful discussions are important for maintaining regional stability.","before":"Peaceful discussions are important for maintaining ","answer":"regional stability","after":".","hint":"sự ổn định khu vực","audio":"089.mp3","vi":"Những cuộc thảo luận hòa bình có vai trò quan trọng đối với việc duy trì ổn định khu vực.","hintEn":"Peace and safety within a particular area."},{"id":90,"set":9,"sentence":"The singer gave a captivating performance that impressed the audience.","before":"The singer gave a ","answer":"captivating performance","after":" that impressed the audience.","hint":"màn trình diễn cuốn hút","audio":"090.mp3","vi":"Ca sĩ đã có một màn trình diễn cuốn hút, gây ấn tượng với khán giả.","hintEn":"An exciting show that holds the audience's attention."},{"id":91,"set":10,"sentence":"The company uses biodegradable materials to make its bags.","before":"The company uses ","answer":"biodegradable materials","after":" to make its bags.","hint":"vật liệu phân hủy sinh học","audio":"091.mp3","vi":"Công ty sử dụng vật liệu phân hủy sinh học để sản xuất túi của mình.","hintEn":"Materials that can break down naturally without lasting pollution."},{"id":92,"set":10,"sentence":"Young adults often seek greater individual autonomy.","before":"Young adults often seek greater ","answer":"individual autonomy","after":".","hint":"quyền tự chủ cá nhân","audio":"092.mp3","vi":"Những người trưởng thành trẻ tuổi thường mong muốn có quyền tự chủ cá nhân cao hơn.","hintEn":"Being able to make your own decisions."},{"id":93,"set":10,"sentence":"Local museums play an important role in cultural preservation.","before":"Local museums play an important role in ","answer":"cultural preservation","after":".","hint":"bảo tồn văn hóa","audio":"093.mp3","vi":"Các bảo tàng địa phương đóng vai trò quan trọng trong việc bảo tồn văn hóa.","hintEn":"Protecting traditions, art and historic places."},{"id":94,"set":10,"sentence":"Customers have complained about excessive packaging on online orders.","before":"Customers have complained about ","answer":"excessive packaging","after":" on online orders.","hint":"bao bì quá mức","audio":"094.mp3","vi":"Khách hàng đã phàn nàn về việc sử dụng quá nhiều bao bì cho các đơn hàng trực tuyến.","hintEn":"Using more boxes or wrapping than is really needed."},{"id":95,"set":10,"sentence":"She achieved her goals despite years of personal adversity.","before":"She achieved her goals despite years of ","answer":"personal adversity","after":".","hint":"nghịch cảnh cá nhân","audio":"095.mp3","vi":"Cô ấy đã đạt được mục tiêu bất chấp nhiều năm phải đối mặt với nghịch cảnh cá nhân.","hintEn":"Serious personal difficulties or hard times."},{"id":96,"set":10,"sentence":"The young pianist gained widespread recognition after winning the contest.","before":"The young pianist gained ","answer":"widespread recognition","after":" after winning the contest.","hint":"sự công nhận rộng rãi","audio":"096.mp3","vi":"Nghệ sĩ piano trẻ đã nhận được sự công nhận rộng rãi sau khi giành chiến thắng trong cuộc thi.","hintEn":"When many people know about and appreciate someone's success."},{"id":97,"set":10,"sentence":"Parents play a key role in teaching children moral values.","before":"Parents play a key role in teaching children ","answer":"moral values","after":".","hint":"giá trị đạo đức","audio":"097.mp3","vi":"Cha mẹ đóng vai trò quan trọng trong việc dạy trẻ những giá trị đạo đức.","hintEn":"Beliefs about what is right and wrong."},{"id":98,"set":10,"sentence":"Some metabolic disorders require lifelong medical treatment.","before":"Some ","answer":"metabolic disorders","after":" require lifelong medical treatment.","hint":"rối loạn chuyển hóa","audio":"098.mp3","vi":"Một số rối loạn chuyển hóa đòi hỏi phải điều trị y tế suốt đời.","hintEn":"Health problems involving how the body processes food and energy."},{"id":99,"set":10,"sentence":"Keeping public spaces clean is an example of civic responsibility.","before":"Keeping public spaces clean is an example of ","answer":"civic responsibility","after":".","hint":"trách nhiệm công dân","audio":"099.mp3","vi":"Giữ gìn không gian công cộng sạch sẽ là một biểu hiện của trách nhiệm công dân.","hintEn":"Doing your duty as a responsible member of society."},{"id":100,"set":10,"sentence":"Parks and public transport are essential for sustainable urban development.","before":"Parks and public transport are essential for ","answer":"sustainable urban development","after":".","hint":"phát triển đô thị bền vững","audio":"100.mp3","vi":"Công viên và giao thông công cộng là những yếu tố thiết yếu cho sự phát triển đô thị bền vững.","hintEn":"Helping cities grow while protecting resources for the future."}];
+const $ = id => document.getElementById(id);
+const audio = $('player');
+let current = 0;
+let showHint = false;
+let showHintEn = false;
+let loopEnabled = false;
+let toastTimeout;
+const STORAGE = 'abhiuyen_listening_collocations_100_corrected_v2';
+let responses = {};
+let revealed = {};
+try { const raw=JSON.parse(localStorage.getItem(STORAGE)||'{}'); responses=raw.responses||{}; revealed=raw.revealed||{}; } catch (_) {}
+function save(){try{localStorage.setItem(STORAGE,JSON.stringify({responses,revealed}));}catch(_){}}
+function notify(message){const el=$('toast');el.textContent=message;el.classList.add('show');clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>el.classList.remove('show'),3000);}
+function formatId(n){return String(n).padStart(3,'0');}
+function normalize(s){return String(s||'').trim().toLocaleLowerCase('en-GB').normalize('NFKC').replace(/[–—−]/g,'-').replace(/[“”‘’]/g,"'").replace(/\s+/g,' ').replace(/[.!?,;:]+$/,'');}
+function currentCard(){return CARDS[current];}
+function renderSentence(){
+  const c=currentCard();const target=$('sentence');target.replaceChildren();
+  target.append(document.createTextNode(c.before));
+  const mid=document.createElement('span');
+  if(revealed[c.id]){mid.className='answer-red';mid.textContent=c.answer;}
+  else{mid.className='blank';mid.textContent='____________';mid.setAttribute('aria-label','missing collocation');mid.style.minWidth=Math.min(270,Math.max(95,c.answer.length*11))+'px';}
+  target.append(mid,document.createTextNode(c.after));
+}
+function updateFeedback(){
+  const c=currentCard();const text=$('feedback');text.className='feedback';
+  if(revealed[c.id]){text.classList.add('revealed');text.textContent='Full English answer above · Collocation in red';}
+  else {text.textContent='';}
+  $('revealBtn').hidden=!!revealed[c.id];
+  $('tryAgainBtn').hidden=!revealed[c.id];
+  $('checkBtn').disabled=!!revealed[c.id];
+  $('fillAnswer').disabled=!!revealed[c.id];
+  $('translation').hidden=!revealed[c.id];
+  $('translationText').textContent=revealed[c.id]?c.vi:'';
+}
+function drawNavigation(){
+  const c=currentCard(),start=(c.set-1)*10;
+  $('setTitle').textContent=`SET ${String(c.set).padStart(2,'0')} · SENTENCES ${formatId(start+1)}–${formatId(start+10)}`;
+  $('setPicker').value=String(c.set);
+  const nav=$('roundGrid');nav.replaceChildren();
+  for(let i=start;i<start+10;i++){
+    const b=document.createElement('button');b.type='button';b.className='round'+(i===current?' active':'')+(revealed[i+1]?' done':'');b.textContent=String(i+1).padStart(2,'0');b.setAttribute('aria-label','Go to sentence '+(i+1));if(i===current)b.setAttribute('aria-current','step');b.addEventListener('click',()=>load(i));nav.append(b);
+  }
+  const all=$('allGrid');
+  if(all.children.length===0){CARDS.forEach((c,i)=>{const b=document.createElement('button');b.className='round';b.type='button';b.textContent=formatId(c.id);b.setAttribute('aria-label','Go to sentence '+c.id);b.addEventListener('click',()=>load(i));all.append(b);});}
+  Array.from(all.children).forEach((b,i)=>{b.className='round'+(i===current?' active':'')+(revealed[i+1]?' done':'');b.setAttribute('aria-current',i===current?'step':'false');});
+  const n=Object.keys(revealed).filter(k=>revealed[k]).length;
+  $('progressText').textContent=`${n} / 100 completed`;$('progressFill').style.width=n+'%';$('progressBar').setAttribute('aria-valuenow',String(n));
+}
+function pauseAndChangeAudio(){
+  const c=currentCard();audio.pause();audio.removeAttribute('src');audio.load();
+  audio.src=c.audio;audio.loop=loopEnabled;audio.playbackRate=Number($('speedSelect').value);audio.load();$('clipName').textContent='TRACK '+formatId(c.id);
+}
+function load(index){
+  if(index<0 || index>=CARDS.length){notify(index<0?'This is the first sentence.':'You have reached sentence 100.');return;}
+  current=index;showHint=false;showHintEn=false;const c=currentCard();
+  $('cardCount').textContent=formatId(c.id)+' / 100';$('cardNumber').textContent=String(c.id).padStart(2,'0');
+  $('hintBtn').textContent='+ Vietnamese hint';$('hintBtn').setAttribute('aria-expanded','false');$('hint').textContent='';
+  $('hintEnBtn').textContent='+ Simple English hint';$('hintEnBtn').setAttribute('aria-expanded','false');$('hintEn').textContent='';
+  $('fillAnswer').value=responses[c.id]||'';
+  $('previousBtn').disabled=current===0;$('nextBtn').textContent=current===99?'Back to 001 ↻':'Next →';
+  pauseAndChangeAudio();renderSentence();updateFeedback();drawNavigation();
+  $('statusText').textContent=revealed[c.id]?'ANSWER REVEALED · REPLAY ANYTIME':'AUDIO READY · LISTEN AT YOUR OWN PACE';
+}
+function showAnswer(){const c=currentCard();revealed[c.id]=true;responses[c.id]=$('fillAnswer').value;save();renderSentence();updateFeedback();drawNavigation();$('statusText').textContent='ANSWER REVEALED · REPLAY ANYTIME';}
+function check(){
+  const c=currentCard();if(revealed[c.id])return;
+  const attempt=$('fillAnswer').value.trim();
+  if(!attempt){notify('Listen and type your collocation first.');$('fillAnswer').focus();return;}
+  responses[c.id]=attempt;save();
+  if(normalize(attempt)===normalize(c.answer)){
+    showAnswer();$('feedback').className='feedback good';$('feedback').textContent='✓ Correct! '+c.answer;
+  } else {
+    $('feedback').className='feedback bad';$('feedback').textContent='Not quite. Listen again or choose “Show answer”.';
+  }
+}
+$('fillAnswer').addEventListener('input',()=>{responses[currentCard().id]=$('fillAnswer').value;save();if(!revealed[currentCard().id]){$('feedback').textContent='';$('feedback').className='feedback';}});
+$('fillAnswer').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();check();}});
+$('checkBtn').addEventListener('click',check);
+$('revealBtn').addEventListener('click',showAnswer);
+$('tryAgainBtn').addEventListener('click',()=>{const id=currentCard().id;delete revealed[id];delete responses[id];save();$('fillAnswer').value='';renderSentence();updateFeedback();drawNavigation();$('statusText').textContent='AUDIO READY · LISTEN AT YOUR OWN PACE';$('fillAnswer').focus();});
+$('hintBtn').addEventListener('click',()=>{showHint=!showHint;$('hintBtn').textContent=showHint?'− Hide Vietnamese hint':'+ Vietnamese hint';$('hintBtn').setAttribute('aria-expanded',String(showHint));$('hint').textContent=showHint?currentCard().hint:'';});
+$('hintEnBtn').addEventListener('click',()=>{showHintEn=!showHintEn;$('hintEnBtn').textContent=showHintEn?'− Hide English hint':'+ Simple English hint';$('hintEnBtn').setAttribute('aria-expanded',String(showHintEn));$('hintEn').textContent=showHintEn?currentCard().hintEn:'';});
+$('replayBtn').addEventListener('click',()=>{audio.pause();try{audio.currentTime=0;}catch(_){ }audio.play().catch(()=>notify('Click play on the audio bar to start listening.'));});
+$('loopBtn').addEventListener('click',()=>{loopEnabled=!loopEnabled;audio.loop=loopEnabled;const b=$('loopBtn');b.textContent=loopEnabled?'↻ Repeat: ON':'↻ Repeat: OFF';b.classList.toggle('is-on',loopEnabled);b.setAttribute('aria-pressed',String(loopEnabled));});
+$('speedSelect').addEventListener('change',()=>{audio.playbackRate=Number($('speedSelect').value);});
+$('previousBtn').addEventListener('click',()=>load(current-1));
+$('nextBtn').addEventListener('click',()=>load(current===99?0:current+1));
+$('setPicker').addEventListener('change',()=>load((Number($('setPicker').value)-1)*10));
+audio.addEventListener('error',()=>{if(audio.getAttribute('src'))notify('Audio file missing. Keep index.html and the audio folder together.');});
+document.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName))return;if(e.key==='ArrowRight'){e.preventDefault();load(current+1);}if(e.key==='ArrowLeft'){e.preventDefault();load(current-1);}});
+for(let s=1;s<=10;s++){const opt=document.createElement('option');opt.value=String(s);opt.textContent=`Set ${String(s).padStart(2,'0')} · ${formatId((s-1)*10+1)}–${formatId(s*10)}`;$('setPicker').append(opt);}
+load(0);
+</script>
+</body>
+</html>
